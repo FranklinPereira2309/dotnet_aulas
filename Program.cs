@@ -54,7 +54,7 @@ Console.WriteLine($"Squareed List: {string.Join(", ", squaredList)}");
 
 #endregion*/
 
-#region 
+/*#region 
 
 try
 {
@@ -83,5 +83,30 @@ int Divide(int a, int b) {
     }
     return a / b;
 }
+
+#endregion*/
+
+    using System.Globalization;
+    CultureInfo culturaBrasileira = new CultureInfo("pt-BR");
+#region 
+
+    DateTime now = DateTime.Now;
+    Console.WriteLine("Data e Hora Atuais: " + now.ToString("dd/MM/yyyy"));
+
+    DateTime dataEspecifica = new DateTime(2023, 11, 21);
+    Console.WriteLine("Data Específica: " + dataEspecifica);
+
+    String formatoEspecifico = now.ToString("dd/MM/yyyy HH:mm:ss");
+    Console.WriteLine(formatoEspecifico);
+
+    DateTime daquiDoisDias = now.AddDays(2);
+    String daquiString = daquiDoisDias.ToString("dd/MM/yyyy");
+    DateTime umaHoraAtras = now.AddHours(-1);
+    String umaHoraString = umaHoraAtras.ToString("dd/MM/yyyy HH:mm:ss");
+
+    Console.WriteLine(daquiString);
+    Console.WriteLine(umaHoraString);
+
+
 
 #endregion
